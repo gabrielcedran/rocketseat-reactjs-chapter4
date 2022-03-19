@@ -19,8 +19,26 @@ Alternatives: vanilla css, sass, css modules (with and without sass) and css in 
 
 ### Installing Chakra UI
 
-`yarn add @chakra-ui/react @chakra-ui/core @emotion/react @emotion/styled framer-motion`
+`yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion`
 
 _Chakra is build on top of emotion. Chakra also uses framer-motion for animations_
 
 Customisation on Chakra's base styles is done via the `theme.ts` file (base colours, fonts, etc). 
+
+### Installing apex charts
+
+Apex charts lib has some good looking charts. To install the dependency `yarn add apexcharts react-apexcharts` (the second is for the integration with react).
+
+Apex charts relies on window api to work thus server side rendering will fail. To deter nextjs from trying to render it on the server side, it is necessary to use the dynamic function:
+
+```
+import dynamic from "next/dynamic";
+...
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+...
+<Chart/>
+
+
+// instead of 
+import Chart from 'react-apexcharts';
+```
