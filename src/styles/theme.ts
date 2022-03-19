@@ -15,6 +15,10 @@ export const theme = extendTheme({ // reuse what chakra provides just extending 
             "50": "#EEEEF2",
         }
     },
+    fonts: {
+        heading: 'Roboto',
+        body: 'Roboto',
+    },
     styles: {
         global:{
             body: {
