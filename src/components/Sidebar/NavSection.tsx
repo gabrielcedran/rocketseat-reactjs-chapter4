@@ -13,7 +13,7 @@ export function NavSection({title, children}: NavSectionProps) {
                 fontWeight='bold' 
                 color='gray.400'
             >
-                GENERAL {title}
+                {title}
             </Text>
             <Stack spacing='4' mt='8' align='stretch'>
                 {children}
