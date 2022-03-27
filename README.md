@@ -54,3 +54,9 @@ Formik was the most popular for a while but React Hook Form has been gaining pop
 Unform is a library that is focused on performance for huge forms - where sometimes the other two libs suffer a bit.
 
 For this project React Hook Form will be used.
+
+#### Passing refs as parameter to components
+
+One of the problems of passing refs to other components is to determine where that ref should be applied AND react does not support refs as part of the component props.
+ 
+To be able to to so it is necessary to use the component ForwardRefRenderFunction - check the commit for more details.
