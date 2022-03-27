@@ -9,11 +9,12 @@ type SignInFormData = {
 
 export default function SignIn() {
 
-  const {register, handleSubmit} = useForm()
+  const {register, handleSubmit, formState} = useForm()
 
-  const handleSignIn: SubmitHandler<SignInFormData> = (values, event) => {
+  const handleSignIn: SubmitHandler<SignInFormData> = async (values, event) =>  {
     console.log(values);
     console.log(event);
+    await new Promise(resolve => setTimeout(resolve, 2000));
   }
 
   return (
@@ -52,6 +53,7 @@ export default function SignIn() {
           mt='6' 
           colorScheme="pink"
           size='lg'
+          isLoading={formState.isSubmitting}
         >
           Login
         </Button>
