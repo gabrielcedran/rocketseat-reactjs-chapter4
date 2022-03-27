@@ -58,5 +58,9 @@ For this project React Hook Form will be used.
 #### Passing refs as parameter to components
 
 One of the problems of passing refs to other components is to determine where that ref should be applied AND react does not support refs as part of the component props.
- 
+
 To be able to to so it is necessary to use the component ForwardRefRenderFunction - check the commit for more details.
+
+#### Extension to more comprehensive and intricate validations (schema validation) and casts
+
+Yup is a library that provides form validation (schema validation) and cast. It has a nice integration with react hook form. `yarn add yup @hookform/resolvers`.
