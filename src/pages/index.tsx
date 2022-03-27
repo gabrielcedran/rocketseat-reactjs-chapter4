@@ -10,6 +10,7 @@ type SignInFormData = {
 export default function SignIn() {
 
   const {register, handleSubmit, formState} = useForm()
+  const {errors} = formState;
 
   const handleSignIn: SubmitHandler<SignInFormData> = async (values, event) =>  {
     console.log(values);
@@ -39,7 +40,11 @@ export default function SignIn() {
               name='email' 
               type='email' 
               label='Email'
-              {...register('email')}
+              error={errors.email}
+              {...register('email', 
+                          {
+                            required: 'Email is mandatory'
+                          })}
             />  
             <Input 
               name='password' 
