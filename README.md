@@ -42,3 +42,15 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 // instead of 
 import Chart from 'react-apexcharts';
 ```
+
+### Libraries to help with forms
+
+For small forms using vanilla controlled or uncontrolled components might suffice. However for bigger forms in bigger projects using a library to help the creation and management of forms is a wise decision.
+
+Three good libraries are Formik, React Hook Form and Unform. The main differences between them are:
+
+Formik was the most popular for a while but React Hook Form has been gaining popularity since the introduction of hooks. The main painpoint of formik is that it has a rather rigid api in opposition to reack hook form.
+
+Unform is a library that is focused on performance for huge forms - where sometimes the other two libs suffer a bit.
+
+For this project React Hook Form will be used.

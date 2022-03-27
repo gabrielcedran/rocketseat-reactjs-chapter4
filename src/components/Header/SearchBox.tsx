@@ -7,8 +7,10 @@ export function SearchBox() {
     //const [searchText, setSearchText] = useState('');
 
     // uncontrolled components is an approach that the value of the component is accessed when necessary instead of proactively. It is achieved via ref hook  
-    
     const searchInputRef = useRef<HTMLInputElement>(null)
+    // usage
+    //console.log(searchInputRef.current.value);
+    //searchInputRef.current.focus()
     
 
     return(
